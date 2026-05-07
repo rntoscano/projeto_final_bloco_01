@@ -3,12 +3,15 @@ package projeto_final_bloco_01;
 import java.util.Scanner;
 import projeto_final_bloco_01.util.Cores;
 import projeto_final_bloco_01.model.Produto;
+import projeto_final_bloco_01.model.Refrigerado;
+import java.time.LocalDate;
+import projeto_final_bloco_01.model.Mercearia;
 
 
 public class Menu {
 	public static void main(String[] args) {
 		
-		Produto p1 = new Produto("Pão Francês", 50, 0.80f, 1, 1);
+		Mercearia p1 = new Mercearia("Pão Francês", 50, 0.80f, 1, 1, LocalDate.of(2026, 5, 20));
 
 		p1.visualizar();
 
@@ -20,7 +23,11 @@ public class Menu {
 
 		p1.setPreco(1.00f);
 		p1.setNomeProduto("Pão Integral");
+		p1.atualizarValidade(LocalDate.of(2026, 2, 10));
 		p1.visualizar();
+		
+		Refrigerado r1 = new Refrigerado("Leite", 20, 7.50f, 2, 2, 5.0f);
+		r1.visualizar();
 
 		Scanner leia = new Scanner(System.in);
 

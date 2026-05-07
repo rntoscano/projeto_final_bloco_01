@@ -62,7 +62,7 @@ public class Produto {
 
 		switch (this.tipo) {
 		case 1:
-			tipoProduto = "Pereciveis";
+			tipoProduto = "Mercearia";
 			break;
 		case 2:
 			tipoProduto = "Refrigerados";
@@ -70,11 +70,13 @@ public class Produto {
 		}
 
 		System.out.println("\n\n***********************************************************");
-		System.out.println("Nome Produto:");
+		System.out.println("Produto:");
 		System.out.println("***********************************************************");
-		System.out.println("Tipo de Produto: " + tipo);
+		System.out.println("Tipo de Produto: " + tipoProduto);
 		System.out.println("Nome do Produto: " + this.nomeProduto);
 		System.out.println("Codigo do Produto: " + this.codigo);
 		System.out.println("Preço do Produto: " + this.preco);
+		System.out.println("Quantidade: " + this.quantidade);
 	}
-}
+	}
+
