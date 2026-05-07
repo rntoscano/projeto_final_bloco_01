@@ -1,21 +1,20 @@
 package projeto_final_bloco_01.model;
 
-public class Produto {
-	
+public abstract class Produto {
+
 	private String nomeProduto;
 	private int quantidade;
 	private float preco;
 	private int codigo;
 	private int tipo;
-	
-	public Produto(String nomeProduto, int quantidade, float preço, int codigo, int tipo) {
+
+	public Produto(String nomeProduto, int quantidade, float preco, int codigo, int tipo) {
 		this.nomeProduto = nomeProduto;
 		this.quantidade = quantidade;
-		this.preco = preço;
+		this.preco = preco;
 		this.codigo = codigo;
 		this.tipo = tipo;
 	}
-	
 
 	public String getNomeProduto() {
 		return nomeProduto;
@@ -48,16 +47,16 @@ public class Produto {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
-	
-	public void adicionar(int qtd) {
-		this.quantidade = this.quantidade + qtd;
-	}
-	public void remover(int qtd) {
-		this.quantidade = this.quantidade - qtd;
-	}
-	
-	public void visualizar() {
 
+	public void adicionar(int qtd) {
+		this.quantidade += qtd;
+	}
+
+	public void remover(int qtd) {
+		this.quantidade -= qtd;
+	}
+
+	public void visualizar() {
 		String tipoProduto = "";
 
 		switch (this.tipo) {
@@ -67,16 +66,18 @@ public class Produto {
 		case 2:
 			tipoProduto = "Refrigerados";
 			break;
+		default:
+			tipoProduto = "Não informado";
 		}
 
-		System.out.println("\n\n***********************************************************");
+		System.out.println("\n***********************************************************");
 		System.out.println("Produto:");
 		System.out.println("***********************************************************");
 		System.out.println("Tipo de Produto: " + tipoProduto);
 		System.out.println("Nome do Produto: " + this.nomeProduto);
-		System.out.println("Codigo do Produto: " + this.codigo);
+		System.out.println("Código do Produto: " + this.codigo);
 		System.out.println("Preço do Produto: " + this.preco);
 		System.out.println("Quantidade: " + this.quantidade);
 	}
-	}
+}
 
