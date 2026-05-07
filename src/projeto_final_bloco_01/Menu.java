@@ -2,10 +2,25 @@ package projeto_final_bloco_01;
 
 import java.util.Scanner;
 import projeto_final_bloco_01.util.Cores;
+import projeto_final_bloco_01.model.Produto;
 
 
 public class Menu {
 	public static void main(String[] args) {
+		
+		Produto p1 = new Produto("Pão Francês", 50, 0.80f, 1, 1);
+
+		p1.visualizar();
+
+		p1.adicionar(20);
+		p1.visualizar();
+
+		p1.remover(10);
+		p1.visualizar();
+
+		p1.setPreco(1.00f);
+		p1.setNomeProduto("Pão Integral");
+		p1.visualizar();
 
 		Scanner leia = new Scanner(System.in);
 
